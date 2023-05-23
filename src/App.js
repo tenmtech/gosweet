@@ -1,8 +1,14 @@
-import Navbar from "./components/navbar/navbar";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./layout/home";
+// import Adminsweet from "./layout/adminsweet";
 function App() {
   return (
-    <div className="container mx-auto mb-8 px-8">
-      <Navbar />
+    <div className="">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/admin/*" element={<Adminsweet />} /> */}
+      </Routes>
     </div>
   );
 }
