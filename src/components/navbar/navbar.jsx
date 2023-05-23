@@ -4,8 +4,8 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="flex flex-row items-center justify-between border-b border-gray-400 py-8">
-      <a href="/" className="lg:basis-2/4 xl:basis-2/4">
+    <div className="flex flex-row items-center justify-between border-b border-gray-400 py-8 px-8 ">
+      <a href="/" className="basis-2/4 md:basis-3/5">
         <img src="/images/logo.png" alt="logo" />
       </a>
       <nav>
@@ -39,9 +39,7 @@ export default function Navbar() {
 
               {/* sectiune hamburger menu */}
             </div>
-            <a href="/" className="lg:basis-2/4 xl:basis-2/4">
-              <img src="/images/logo.png" alt="logo" />
-            </a>
+
             <ul className="flex flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 uppercase">
                 <a href="#map" onClick={() => setIsNavOpen(false)}>
@@ -78,7 +76,7 @@ export default function Navbar() {
 
           {/* sectiune navbar in mod desktop */}
         </section>
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex  text-center text-[#D1A4A9] font-bold  content-center">
+        <ul className="DESKTOP-MENU hidden  space-x-7 lg:flex  text-center text-[#D1A4A9] text-sm  font-bold  content-center">
           <li>
             <a href="#map">Home Sweet</a>
           </li>
