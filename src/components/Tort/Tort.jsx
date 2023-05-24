@@ -61,21 +61,21 @@ function Tort() {
 
   return (
     <div
-      className="max-w-[1400px] h-[600px] w-full m-auto py-16 px-4 relative group"
+      className="max-w-[1400px] h-[400px] md:h-[600px] w-full m-auto py-16 px-4 relative group"
       id="torturi"
     >
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-auto h-full rounded-2xl bg-right bg-contain bg-no-repeat duration-500 drop-shadow-2xl"
+        className="w-auto h-full bg-center  md:bg-right bg-cover md:bg-contain bg-no-repeat duration-500 drop-shadow-2xl"
       >
-        <div className="grid grid-cols-2">
-          <div className="text-center">
+        <div className="md:grid md:grid-cols-2">
+          <div className="text-center text-red-300">
             <h1 className="text-4xl py-7 px-2">{slides[currentIndex].name}</h1>
             <p className="py-7 px-20 text-xl text-justify">
               {slides[currentIndex].description}
             </p>
           </div>
-          <div></div>
+          <div className=""></div>
         </div>
       </div>
 
