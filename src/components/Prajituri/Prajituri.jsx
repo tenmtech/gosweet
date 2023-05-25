@@ -62,7 +62,7 @@ function Prajituri() {
   return (
     <div
       className="max-w-[1920px] h-[400px] md:h-[600px] w-full my-4 py-8 md:my-10 md:py-10  relative group "
-      id="torturi"
+      id="prajituri"
     >
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}

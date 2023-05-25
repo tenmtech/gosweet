@@ -13,7 +13,7 @@ function Termeni() {
           {" "}
           Termeni și Condiții
         </h1>
-        <ul className="flex flex-col">
+        <ul className="flex flex-col gap-2 sm:gap-4">
           <li className="flex flex-row gap-2">
             <AiOutlineCheck className="text-xl text-red-300" />
             <p className="flex-1 text-justify text-sm md:text-lg">
