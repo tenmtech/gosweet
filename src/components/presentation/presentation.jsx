@@ -8,13 +8,13 @@ const Presentation = () => {
           We combine sweet with love
         </h1>
         <p className="p-2 md:p-16 text-sm md:px-8 text-center text-md md:text-lg ">
-          Go sweet si-a inceput activitatea ca un hobby dintr-o pasiune pentru
-          arta, pentru dulce si pentru natural. Curand am descoperit clienti
-          care empatizeaza cu noi si care cauta aceste produse artizanale,
-          aceste produse unice. Incet, incet, aceasta pasiune s-a transformat in
-          mod organic intr-un business. Motiv pentru care reorientarea mea ca
-          artist a fost necesara. Am decis sa merg alaturi de voi pe acest drum
-          al frumosului, al bunului gust, al artei cofetariei.
+          Go sweet și-a început activitatea ca un hobby dintr-o pasiune pentru
+          artă, pentru dulce și pentru natural. Curând am descoperit clienți
+          care empatizează cu noi și care caută aceste produse artizanale,
+          aceste produse unice. Încet, încet, această pasiune s-a transformat în
+          mod organic într-un business. Motiv pentru care reorientarea mea ca
+          artist a fost necesară. Am decis să merg alături de voi pe acest drum
+          al frumosului, al bunului gust, al artei cofetăriei.
         </p>
         <button
           className="bg-amber-800/60 hover:bg-amber-800/100 text-white font-bold  px-4 rounded-full h-9 w-auto "
