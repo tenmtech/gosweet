@@ -76,23 +76,23 @@ export default function Navbar() {
 
           {/* sectiune navbar in mod desktop */}
         </section>
-        <ul className="DESKTOP-MENU hidden  space-x-7 lg:flex  text-center text-[#D1A4A9] text-sm  font-bold  content-center">
-          <li>
+        <ul className="DESKTOP-MENU hidden  space-x-7 lg:flex  text-center text-[#D1A4A9]  text-sm  font-bold  content-center">
+          <li className="hover:text-red-900">
             <a href="#map">Home Sweet</a>
           </li>
-          <li>
+          <li className="hover:text-red-900">
             <a href="#torturi">Torturi</a>
           </li>
-          <li>
+          <li className="hover:text-red-900">
             <a href="#prajituri">Prăjituri</a>
           </li>
-          <li>
+          <li className="hover:text-red-900">
             <a href="#termeniconditii">Termeni și condiții</a>
           </li>
-          <li>
+          <li className="hover:text-red-900">
             <a href="#instagram">Instagram</a>
           </li>
-          <li>
+          <li className="hover:text-red-900">
             <a href="#contact">Contact</a>
           </li>
         </ul>
