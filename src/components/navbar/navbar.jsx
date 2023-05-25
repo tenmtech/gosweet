@@ -5,7 +5,7 @@ export default function Navbar() {
 
   return (
     <div className="flex flex-row items-center justify-between border-b border-gray-400 py-8 px-8 ">
-      <a href="/" className="basis-2/4 md:basis-3/5">
+      <a href="/" className=" md:basis-3/5">
         <img src="/images/logo.png" alt="logo" />
       </a>
       <nav>
