@@ -67,7 +67,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="#contact " onClick={() => setIsNavOpen(false)}>
+                <a href="#contact" onClick={() => setIsNavOpen(false)}>
                   Contact
                 </a>
               </li>
