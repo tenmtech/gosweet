@@ -19,7 +19,7 @@ function MapPreview() {
   return (
     <>
       <div className="h-full w-full flex-1" id="map">
-        <LoadScript googleMapsApiKey="AIzaSyABqnNdLOa7aIOEqi-G9TKuE1938SKurO4">
+        <LoadScript googleMapsApiKey="">
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
