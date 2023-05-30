@@ -7,6 +7,7 @@ import Prajituri from "../components/Prajituri/Prajituri";
 import Termeni from "../components/Termeni/Termeni";
 import ContactForm from "../components/Contact/ContactForm";
 import Footer from "../components/Footer/Footer";
+
 const home = () => {
   return (
     <div className="container mx-auto  px-8 xl:px-32">
