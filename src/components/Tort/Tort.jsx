@@ -1,47 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 function Tort() {
-  const slides = [
-    {
-      id: "1",
-      url: "https://images.unsplash.com/photo-1674991773078-12a3eab409b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-      name: "Tort 1",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-    },
-    {
-      id: "2",
-      url: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Tort 2",
-      description:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English",
-    },
-    {
-      id: "3",
-      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Tort 3",
-      description:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    },
-    {
-      id: "4",
-      url: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Tort 4",
-      description:
-        "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-    },
-    {
-      id: "5",
-      url: "https://plus.unsplash.com/premium_photo-1669931367700-e4e1e0387d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Tort 5",
-      description:
-        "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words et",
-    },
-  ];
-
+  const [slides, setSlides] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const dataFetch = async () => {
+      const data = await (await fetch("http://localhost:5000/api/tort")).json();
+
+      setSlides(data);
+    };
+
+    dataFetch();
+  }, []);
+  console.log(slides);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -58,6 +32,8 @@ function Tort() {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+  if (!slides[currentIndex]) return null;
 
   return (
     <div

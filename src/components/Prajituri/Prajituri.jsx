@@ -3,7 +3,8 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 function Prajituri() {
-  const [slides, setState] = useState([]);
+  const [slides, setSlides] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const dataFetch = async () => {
@@ -11,14 +12,12 @@ function Prajituri() {
         await fetch("http://localhost:5000/api/prajituri")
       ).json();
 
-      setState(data);
+      setSlides(data);
     };
 
     dataFetch();
   }, []);
   console.log(slides);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -35,6 +34,8 @@ function Prajituri() {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+  if (!slides[currentIndex]) return null;
 
   return (
     <div
